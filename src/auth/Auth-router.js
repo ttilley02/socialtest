@@ -1,5 +1,5 @@
 const express = require("express");
-const AuthService = require("../middleware/Auth-service.js");
+const AuthServices = require("../middleware/Auth-service.js");
 
 const authRouter = express.Router();
 const jsonBodyParser = express.json();
