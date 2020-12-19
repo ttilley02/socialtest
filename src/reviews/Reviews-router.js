@@ -6,9 +6,10 @@ const { requireAuth } = require("../middleware/jwt-auth");
 const reviewsRouter = express.Router();
 const jsonBodyParser = express.json();
 
+
+//lets users sumbit a review
 reviewsRouter
   .route("/")
-
   .post(requireAuth, jsonBodyParser, (req, res, next) => {
     const { post_id, text, rating } = req.body;
     const newReview = { post_id, text, rating };

@@ -4,6 +4,8 @@ const { requireAuth } = require("../middleware/jwt-auth");
 
 const postsRouter = express.Router();
 
+
+//gets listing of all post on the site
 postsRouter.route("/").get((req, res, next) => {
   PostsService.getAllposts(req.app.get("db"))
     .then((posts) => {
@@ -12,6 +14,7 @@ postsRouter.route("/").get((req, res, next) => {
     .catch(next);
 });
 
+//gets listing of specific post on the site
 postsRouter
   .route("/:post_id")
   .all(requireAuth)
@@ -20,7 +23,8 @@ postsRouter
     res.json(PostsService.serializepost(res.post));
   });
 
-postsRouter
+
+//gets reviews of specific post on the site. 
   .route("/:post_id/reviews/")
   .all(requireAuth)
   .all(checkpostExists)

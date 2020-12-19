@@ -4,6 +4,9 @@ const AuthService = require('../middleware/Auth-service.js')
 const authRouter = express.Router()
 const jsonBodyParser = express.json()
 
+/*loging enpoint that posts the user_name and password input, 
+pings middleware service object for validation and then posts to database upon validation*/
+
 authRouter
 .post('/login', jsonBodyParser, (req, res, next) => {
     const { user_name, password } = req.body
