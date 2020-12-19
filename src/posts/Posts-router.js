@@ -24,7 +24,8 @@ postsRouter
   });
 
 
-//gets reviews of specific post on the site. 
+//gets reviews of specific post on the site.
+postsRouter 
   .route("/:post_id/reviews/")
   .all(requireAuth)
   .all(checkpostExists)
