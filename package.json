@@ -9,7 +9,7 @@
     "dev": "nodemon src/server.js",
     "migrate": "postgrator --config postgrator-config.js",
     "migrate:test": "env NODE_ENV=test npm run migrate",
-    "migrate:production": "heroku run npm run migrate",
+    "migrate:production": "env SSL=true DATABASE_URL=$(heroku config:get  postgres://tyggiefeuusotg:cc9fe2822e08677f4d6225b0891259797389b204f3ac7003853af412a1ce9454@ec2-18-235-20-228.compute-1.amazonaws.com:5432/d2r3od5hpbn8rr) npm run migrate",
     "postdeploy": "npm run migrate:production",
     "start": "node src/server.js",
     "predeploy": "npm audit",
