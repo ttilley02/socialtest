@@ -1,6 +1,6 @@
 const express = require("express");
 const path = require("path");
-const ReviewsService = require("./reviews-service");
+const ReviewsService = require("./Reviews-service");
 const { requireAuth } = require("../middleware/Jwt-auth");
 
 const reviewsRouter = express.Router();
