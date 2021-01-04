@@ -1,6 +1,6 @@
 const express = require("express");
 const PostsService = require("./Posts-service");
-const { requireAuth } = require("../middleware/jwt-auth");
+const { requireAuth } = require("../middleware/Jwt-auth");
 
 const postsRouter = express.Router();
 
