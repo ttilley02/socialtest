@@ -40,8 +40,8 @@
     "Thomas `tomatao` Hudspith-Tatham <iammotivated@gmail.com>",
     "Joshua Reade Harris <jharris@thinkful.com>"
   ],
-   "engines": {
-       "node": "14.15.2"
-     },
+  "engines": {
+    "node": "14.15.2"
+  },
   "license": "MIT"
 }
